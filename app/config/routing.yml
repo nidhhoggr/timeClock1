@@ -1,3 +1,7 @@
+ose_time_clock:
+    resource: "@OSETimeClockBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ose_user:
     resource: "@OSEUserBundle/Resources/config/routing.yml"
     prefix:   /

@@ -7,4 +7,9 @@ OSE\UserBundle\Entity\User:
             id: true
             generator:
                 strategy: AUTO
+
+    oneToMany:
+        entries:
+            targetEntity: OSE\TimeClockBundle\Entity\Entry
+            mappedBy: User
     lifecycleCallbacks: {  }

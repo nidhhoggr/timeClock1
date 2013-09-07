@@ -1,0 +1,23 @@
+OSE\TimeClockBundle\Entity\EntryType:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        entryId:
+            type: integer
+            column: entry_id
+        isClockin:
+            type: boolean
+            column: is_clockin
+        name:
+            type: string
+            length: 255
+    oneToMany:
+        entries:
+            targetEntity: Entry
+            mappedBy: EntryType
+    lifecycleCallbacks: {  }

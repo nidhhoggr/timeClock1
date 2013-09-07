@@ -1,0 +1,25 @@
+OSE\TimeClockBundle\Entity\Entry:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        user_id:
+            type: integer
+            column: user_id
+        time:
+            type: datetime
+        details:
+            type: string
+            length: 255
+    manyToOne:
+        user:
+            targetEntity: OSE\UserBundle\Entity\User
+            inversedBy: Entry
+        entry_type:
+            targetEntity: EntryType
+            inversedBy: Entry
+    lifecycleCallbacks: {  }

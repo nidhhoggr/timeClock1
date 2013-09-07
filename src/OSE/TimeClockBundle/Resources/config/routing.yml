@@ -1,0 +1,11 @@
+ose_time_clock_homepage:
+    pattern:  /
+    defaults: { _controller: OSETimeClockBundle:Default:index }
+
+OSETimeClockBundle_entry:
+    resource: "@OSETimeClockBundle/Resources/config/routing/entry.yml"
+    prefix:   /timeclock/entry
+
+OSETimeClockBundle_entrytype:
+    resource: "@OSETimeClockBundle/Resources/config/routing/entrytype.yml"
+    prefix:   /timeclock/entrytype

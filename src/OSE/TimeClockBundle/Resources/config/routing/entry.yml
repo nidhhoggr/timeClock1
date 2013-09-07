@@ -1,0 +1,30 @@
+entry:
+    pattern:  /
+    defaults: { _controller: "OSETimeClockBundle:Entry:index" }
+
+entry_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OSETimeClockBundle:Entry:show" }
+
+entry_new:
+    pattern:  /new
+    defaults: { _controller: "OSETimeClockBundle:Entry:new" }
+
+entry_create:
+    pattern:  /create
+    defaults: { _controller: "OSETimeClockBundle:Entry:create" }
+    requirements: { _method: post }
+
+entry_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OSETimeClockBundle:Entry:edit" }
+
+entry_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OSETimeClockBundle:Entry:update" }
+    requirements: { _method: post|put }
+
+entry_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OSETimeClockBundle:Entry:delete" }
+    requirements: { _method: post|delete }
