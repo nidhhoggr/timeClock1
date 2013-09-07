@@ -1,0 +1,11 @@
+OSE\TimeClockBundle\Entity\Test:
+    type: entity
+    table: null
+    repositoryClass: OSE\TimeClockBundle\Entity\TestRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
