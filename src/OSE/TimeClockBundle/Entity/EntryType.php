@@ -153,4 +153,9 @@ class EntryType
     {
         return $this->entries;
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

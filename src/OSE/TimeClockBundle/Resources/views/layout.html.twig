@@ -28,10 +28,7 @@
 <div class="shell">
   <div class="border">
     <div id="header">
-{#
-{{ app.request.attributes.get('_route') }}
-#}
-      <h1 id="logo">time<em>Clock</em></h1>
+      <h1 id="logo">time<em>Clock/em></h1>
       <div class="socials right">
         <ul>
           <li><a href="#" class="rss">RSS</a></li>
@@ -47,23 +44,17 @@
             <a href="{{ path('ose_time_clock_homepage') }}">Home</a>
         </li>
         <li>
-            <a href="{{ path('entry') }}">Entries</a>
+            <a href="{{ path('timeclock/entry') }}">Entries</a>
         </li>
         <li>
-            <a href="{{ path('entrytype') }}">Entry Types</a>
-        </li>
-        {% if app.user %} 
-        <li>
-            <a href="{{ path('fos_user_profile_show') }}">Profile</a>
+            <a href="{{ path('timeclock/entrytype') }}">Entry Types</a>
         </li>
         <li>
-            <a href="{{ path('fos_user_security_logout') }}">Logout</a>
+            <a href="{{ path('login') }}">Login</a>
         </li>
-        {% else %}
         <li>
-            <a href="{{ path('fos_user_security_login') }}">Login</a>
+            <a href="{{ path('logout') }}">Logout</a>
         </li>
-        {% endif %}
       </ul>
       <div class="cl">&nbsp;</div>
     </div>
@@ -75,6 +66,21 @@
         <h3>Some Links</h3>
         <div class="sidebar-nav">
           <ul>
+            <li>
+              <a href="{{ path('ose_time_clock_homepage') }}">Home</a>
+            </li>
+            <li>
+              <a href="{{ path('timeclock/entry') }}">Entries</a>
+            </li>
+            <li>
+              <a href="{{ path('timeclock/entrytype') }}">Entry Types</a>
+            </li>
+            <li>
+              <a href="{{ path('login') }}">Login</a>
+            </li>
+            <li>
+              <a href="{{ path('logout') }}">Logout</a>
+            </li>
           </ul>
         </div>
       </div>

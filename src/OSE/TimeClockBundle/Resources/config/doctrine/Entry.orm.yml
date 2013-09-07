@@ -15,6 +15,7 @@ OSE\TimeClockBundle\Entity\Entry:
         details:
             type: string
             length: 255
+            nullable: true
     manyToOne:
         user:
             targetEntity: OSE\UserBundle\Entity\User

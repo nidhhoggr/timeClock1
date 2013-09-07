@@ -15,11 +15,10 @@ class EntryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('user_id')
-            ->add('time')
-            ->add('details')
             ->add('user')
             ->add('entry_type')
+            ->add('time',null,array('data'=> new \DateTime("now")))
+            ->add('details')
         ;
     }
     

@@ -7,12 +7,10 @@ OSE\TimeClockBundle\Entity\EntryType:
             id: true
             generator:
                 strategy: AUTO
-        entryId:
-            type: integer
-            column: entry_id
         isClockin:
             type: boolean
             column: is_clockin
+            nullable: true
         name:
             type: string
             length: 255

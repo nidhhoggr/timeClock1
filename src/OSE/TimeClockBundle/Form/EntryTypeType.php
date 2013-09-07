@@ -15,9 +15,8 @@ class EntryTypeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('entryId')
-            ->add('isClockin')
             ->add('name')
+            ->add('isClockin')
         ;
     }
     
