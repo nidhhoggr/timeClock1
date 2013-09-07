@@ -1,5 +1,29 @@
 {% extends '::base.html.twig' %}
 
 {% block content -%}
-Hello World!
+
+ 
+
+     {% for entry in entries %}
+
+         {% if entry.entryType.isClockin %}
+         <div class="user_detail_row in">
+         {% else %}
+         <div class="user_detail_row out">
+         {% endif %}         
+
+             <div class="time_col">
+                 {{ entry.time|date('F m Y, H:i a') }}
+             </div>
+             <div class="user_col">
+                 {{ entry.user }}
+             </div>
+             <div class="entrytype_col">
+                 {{ entry.entryType }}
+             </div>
+
+         </div>
+
+     {% endfor %}
+
 {% endblock -%}
