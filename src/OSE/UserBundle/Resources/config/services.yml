@@ -1,0 +1,7 @@
+parameters:
+#    ose_user.example.class: OSE\UserBundle\Example
+
+services:
+#    ose_user.example:
+#        class: %ose_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
