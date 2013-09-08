@@ -1,5 +1,5 @@
 <?php
-namespace OSE\TimeClockBundle\Entity;
+namespace OSE\TimeClockBundle\Repository\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

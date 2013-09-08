@@ -101,10 +101,15 @@ class UserController extends Controller
             throw $this->createNotFoundException('Unable to find User entity.');
         }
 
+        $entries = $em->getRepository('OSETimeClockBundle:Entry')
+            ->findAllEntriesByUserId($id);
+
+        $hours = $this->get('ose_time_clock.entrycalc')->getTotalHoursFromEntries($entries);
         $deleteForm = $this->createDeleteForm($id);
 
         return $this->render('OSEUserBundle:User:show.html.twig', array(
             'entity'      => $entity,
+            'hours'       => $hours,
             'delete_form' => $deleteForm->createView(),        ));
     }
 

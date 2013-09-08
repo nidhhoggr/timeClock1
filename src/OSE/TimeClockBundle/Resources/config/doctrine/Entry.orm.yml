@@ -1,5 +1,6 @@
 OSE\TimeClockBundle\Entity\Entry:
     type: entity
+    repositoryClass: OSE\TimeClockBundle\Entity\Repository\EntryRepository
     table: null
     fields:
         id:
